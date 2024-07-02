@@ -1,15 +1,27 @@
-import {View, Text, Button} from 'react-native';
 import React from 'react';
+import {Button, StyleSheet, View} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Box from '../components/Box';
 
-export default function SearchView({navigation}) {
+const SearchView = ({navigation}) => {
   return (
-    <Box flex={1} justifyContent={'center'} aligItems={'center'}>
+    <View>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Detail')}
       />
-      <Box size={20} bg="blue" mt={20} />
-    </Box>
+      <Box style={styles.center} />
+      <Icon name="rocket" size={30} color="#900" />
+    </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default SearchView;

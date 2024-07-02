@@ -1,7 +1,15 @@
-import {View} from 'react-native';
-import styled from 'styled-components';
-import {compose, color, size, space, flexbox} from 'styled-system';
+import {View, Text, StyleSheet} from 'react-native';
+import React from 'react';
 
-const Box = styled(View)(compose(color, size, space, flexbox));
+export default function Box() {
+  return <View style={styles.box1}></View>;
+}
 
-export default Box;
+const styles = StyleSheet.create({
+  box1: {
+    width: 20,
+    height: 20,
+    backgroundColor: 'blue',
+    marginTop: 20,
+  },
+});
